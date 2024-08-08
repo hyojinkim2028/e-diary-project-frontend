@@ -1,0 +1,79 @@
+.Join {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_img {
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.join_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Join .email_container {
+  width: 92.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Join #email_auth_check_container {
+  width: 92.5%;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#email_auth_submit,
+#email_auth_submit_check {
+  padding: none;
+  margin: none;
+  width: 50%;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.join_input {
+  margin-bottom: 30px;
+}
+
+.Join input {
+  width: 90%;
+  height: 30px;
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 25px;
+}
+
+.Join input::placeholder {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.Join .join_button {
+  width: 80%;
+  height: 60px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}

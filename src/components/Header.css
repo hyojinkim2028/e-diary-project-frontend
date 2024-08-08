@@ -1,0 +1,32 @@
+.Header{
+    display: flex;
+    /* 세로 기준 가운데 정렬 */
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(226,226,226)
+
+}
+
+.Header > div{
+    /* 헤더 안의 div 요소를 꽉채움 */
+    display: flex;
+}
+
+.Header .header_center{
+    /* 꽉 채운 상태에서 가운데 50% 차지함 */
+    width: 50%;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.Header .header_left{
+    /* 꽉 채운 상태에서 가운데 50% 차지함 */
+    width: 25%;
+    justify-content: flex-start;
+}
+
+.Header .header_right{
+    /* 꽉 채운 상태에서 가운데 50% 차지함 */
+    width: 25%;
+    justify-content: flex-end;
+}
