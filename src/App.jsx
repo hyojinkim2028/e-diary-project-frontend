@@ -27,7 +27,6 @@ function App() {
     } else {
       // 토큰이 없는 경우 Authorization 헤더 삭제
       delete axios.defaults.headers.common['Authorization']
-      console.log(isLoggedIn)
     }
   }
 
@@ -46,8 +45,13 @@ function App() {
     }
   }
 
+  // 로그인된 유저만 일기 조회가능, 비로그인시 로그인화면 이동
   useEffect(() => {
-    getData()
+    if (isLoggedIn === 'true') {
+      getData()
+    } else {
+      nav('/login')
+    }
   }, [])
 
   // 로그인
@@ -187,12 +191,13 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/join" element={<Join />} />
-            <Route
+            {/* <Route
               path="/home"
               element={
                 isLoggedIn === 'true' ? <Home /> : <Navigate to="/login" />
               }
-            />
+            /> */}
+            <Route path="/home" element={<Home />} />
             <Route path="/new" element={<New />} />
             <Route path="/diary/:id" element={<Diary />} />
             <Route path="/edit/:id" element={<Edit />} />
